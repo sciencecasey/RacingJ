@@ -1,6 +1,7 @@
 package totiseHareRace;
 import java.util.Random;
 
+@SuppressWarnings("javadoc")
 public class RaceGame {
    int positionH;
    int positionT;
@@ -41,12 +42,12 @@ public class RaceGame {
             System.out.println("Tortoise Winse!");
          }
       }
-      else if (this.positionH == positionT) {
+      else if (this.positionH == this.positionT) {
          if(this.positionH>46) {
             //printing would go off board
             System.out.println("OUCH!! I see the finishline!");
          }
-         else if(this.positionH<1) {
+         else if(this.positionH<2) {
             //printing go off board
             System.out.println("OUCH!");//will be at initial location (0)
          }
@@ -204,7 +205,5 @@ public class RaceGame {
       //call to gameplay
       RaceGame race = new RaceGame();
       race.moveGenerator();
-      
-      //
    }
 }
